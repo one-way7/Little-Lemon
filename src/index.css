@@ -1,13 +1,138 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Karla", sans-serif;
+	color: var(--secondary-4);
+	transition: all 0.3s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--primary-1: #495e57;
+	--primary-2: #f4ce14;
+	--secondary-1: #ee9972;
+	--secondary-2: #fbdabb;
+	--secondary-3: #edefee;
+	--secondary-4: #333333;
+}
+
+h1,
+h2 {
+	margin-block: 0;
+	margin-inline: 0;
+	font-family: "Markazi Text", serif;
+	font-weight: 400;
+	line-height: 1;
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--secondary-4);
+}
+
+section {
+	width: 100%;
+}
+
+section > div {
+	width: 100%;
+	max-width: 55rem;
+	margin-inline: auto;
+}
+
+section.full {
+	width: 100%;
+	height: calc(100vh - 80px);
+	padding: 0 2rem;
+}
+
+section.full > div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+section.full > div > * {
+	color: var(--secondary-1);
+	fill: var(--secondary-1);
+}
+
+section.full > div .icon {
+	font-size: 5rem;
+}
+
+section.confirmed-booking > div > * {
+	color: var(--primary-1);
+	fill: var(--primary-1);
+}
+
+button {
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: 0;
+}
+
+.btn {
+	padding: 1rem 1.5rem;
+	background-color: var(--primary-2);
+	border: 2px solid transparent;
+	border-radius: 0.25rem;
+}
+
+.btn:not(:disabled):hover {
+	color: var(--primary-1);
+	background-color: transparent;
+	border: 2px solid var(--primary-2);
+}
+
+.btn:disabled {
+	background-color: var(--secondary-3);
+	cursor: not-allowed;
+}
+
+label {
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	color: var(--primary-1);
+}
+
+input,
+select {
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	background-color: transparent;
+	border: 1px solid var(--secondary-3);
+	border-radius: 0.25rem;
+}
+
+input::placeholder,
+select::placeholder {
+	color: var(--secondary-3);
+}
+
+input:focus,
+select:focus {
+	outline: 0;
+	border: 1px solid var(--primary-1);
 }

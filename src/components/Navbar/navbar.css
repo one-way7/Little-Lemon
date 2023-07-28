@@ -1,0 +1,38 @@
+/* Nav Styles */
+
+.navbar {
+	padding: 1.25rem 2rem;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 10;
+}
+
+.navbar nav {
+	width: 100%;
+	max-width: 55rem;
+	margin-inline: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar nav .logo {
+	display: flex;
+	align-items: center;
+}
+
+.navbar nav .nav-links {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+.navbar nav .nav-links a {
+	font-weight: 500;
+}
+
+.navbar nav .nav-links a:hover,
+.navbar nav .nav-links a.active {
+	color: var(--primary-2);
+}
